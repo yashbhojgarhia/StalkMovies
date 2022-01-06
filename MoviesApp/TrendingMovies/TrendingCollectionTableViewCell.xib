@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="TrendingCollectionTableViewCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmA-WX-GKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-8S-gMv">
+                                <rect key="frame" x="10" y="4.5" width="141" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3aa-8S-gMv" secondAttribute="trailing" constant="10" id="DfK-tG-6UE"/>
+                            <constraint firstItem="3aa-8S-gMv" firstAttribute="leading" secondItem="hmA-WX-GKs" secondAttribute="leading" constant="10" id="Q1S-uD-gDE"/>
+                            <constraint firstAttribute="height" constant="30" id="dAS-3L-ZLL"/>
+                            <constraint firstItem="3aa-8S-gMv" firstAttribute="centerY" secondItem="hmA-WX-GKs" secondAttribute="centerY" id="uGT-Mt-UdQ"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kex-pD-fgf">
+                        <rect key="frame" x="0.0" y="30" width="320" height="86"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hUC-Vn-okp">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPN-XI-MJh">
+                        <rect key="frame" x="0.0" y="116" width="320" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5I-aO-phq">
+                                <rect key="frame" x="10" y="4.5" width="173" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m5I-aO-phq" firstAttribute="centerY" secondItem="bPN-XI-MJh" secondAttribute="centerY" id="DI3-8R-6NF"/>
+                            <constraint firstAttribute="height" constant="30" id="nAd-bR-0wq"/>
+                            <constraint firstItem="m5I-aO-phq" firstAttribute="leading" secondItem="bPN-XI-MJh" secondAttribute="leading" constant="10" id="ocy-GK-jHS"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m5I-aO-phq" secondAttribute="trailing" constant="10" id="tQa-bA-0n7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bPN-XI-MJh" firstAttribute="top" secondItem="kex-pD-fgf" secondAttribute="bottom" id="3bz-Ta-aeU"/>
+                    <constraint firstAttribute="bottom" secondItem="bPN-XI-MJh" secondAttribute="bottom" id="4GV-b7-dHB"/>
+                    <constraint firstAttribute="trailing" secondItem="bPN-XI-MJh" secondAttribute="trailing" id="8uL-6a-XK7"/>
+                    <constraint firstItem="kex-pD-fgf" firstAttribute="top" secondItem="hmA-WX-GKs" secondAttribute="bottom" id="CVO-Af-ODb"/>
+                    <constraint firstItem="hmA-WX-GKs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cse-SV-IOM"/>
+                    <constraint firstItem="bPN-XI-MJh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QgI-Y5-MkU"/>
+                    <constraint firstItem="hmA-WX-GKs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Sl6-7c-Qjf"/>
+                    <constraint firstItem="kex-pD-fgf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZcY-Ut-hWf"/>
+                    <constraint firstAttribute="trailing" secondItem="kex-pD-fgf" secondAttribute="trailing" id="bLG-nE-qdR"/>
+                    <constraint firstAttribute="trailing" secondItem="hmA-WX-GKs" secondAttribute="trailing" id="rcp-Cx-Esi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="kex-pD-fgf" id="Ghy-80-A9Z"/>
+            </connections>
+            <point key="canvasLocation" x="-36.231884057971016" y="95.089285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
